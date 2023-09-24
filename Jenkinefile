@@ -26,7 +26,7 @@ pipeline {
 			 }
 			}
 			steps { 
-               cleanWp ()			
+               cleanWs ()			
 			  sh "git clone https://github.com/keshavkale123/my-app.git -b a1"
 			  sh " cp -r /mnt/keshav1/my-app/dev.html /var/www/html/"
 		      sh " chmod -R 777 /var/www/html "
