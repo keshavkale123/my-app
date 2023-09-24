@@ -13,8 +13,8 @@ pipeline {
             }
         stage ('master') {
 			steps {
-			  sh "git clone https://github.com/keshavkale123/my-app.git"
-			  sh " cp -r /mnt/keshav2/my-app/index.html /var/www/html/"
+			  sh "git clone https://github.com/keshavkale123/my-app.git -b a2"
+			  sh " cp -r /mnt/keshav2/my-app/qa.html /var/www/html/"
 		      sh " chmod -R 777 /var/www/html "
 			  }
 			}
