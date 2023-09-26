@@ -25,7 +25,7 @@ pipeline {
 	}
 	stage ('slave-1 deploy') {
 	   steps {
-         sh "scp -i /mnt/ohio123.pem /mnt/a1/my-app/dev.html ec2-user@172.31.23.77:/var/www/html/" 	
+         sh "scp -i /mnt/ohio123.pem  /mnt/a1/my-app/dev.html ec2-user@172.31.23.77:/var/www/html/" 	
 	}
 	}
   	stage ('slave-2 clone') {
@@ -39,7 +39,7 @@ pipeline {
       }
     stage ('slave-2 deploy') {
       steps {
-        sh "scp -i /mnt/ohio123.pem /mnt/a2/my-app/qa.html  ec2-user@172.31.25.200:/var/www/html/"
+        sh "scp -i /mnt/ohio123.pem -o StrictHostKeyChecking=no /mnt/a2/my-app/qa.html  ec2-user@172.31.25.200:/var/www/html/"
           }
         } 
      }
