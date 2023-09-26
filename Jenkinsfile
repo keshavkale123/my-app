@@ -28,7 +28,7 @@ pipeline {
          sh "scp -i /mnt/ohio123.pem /mnt/a1/my-app/dev.html ec2-user@172.31.23.77:/var/www/html/" 	
 	}
 	}
-  /*	stage ('slave-2 clone') {
+  	stage ('slave-2 clone') {
 	  steps {
 	     dir ('/mnt/a2') {
 		 cleanWs ()
@@ -39,9 +39,9 @@ pipeline {
       }
     stage ('slave-2 deploy') {
       steps {
-        sh "scp -i /mnt/ohio123.pem /mnt/a2/my-app/qa.html  ec2-user@172.31.23.77:/var/www/html/"
+        sh "scp -i /mnt/ohio123.pem /mnt/a2/my-app/qa.html  ec2-user@172.31.25.200:/var/www/html/"
           }
-        } */
+        } 
      }
    }	 
 	
